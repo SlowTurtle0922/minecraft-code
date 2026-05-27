@@ -1,1 +1,16 @@
 #測試
+
+# 複製儲存庫
+git clone https://github.com/AsyncFuncAI/deepwiki-open.git
+cd deepwiki-open
+
+# 建立包含 API 金鑰的 .env 檔案
+echo "GOOGLE_API_KEY=your_google_api_key" > .env
+echo "OPENAI_API_KEY=your_openai_api_key" >> .env
+# 可選：如果您想使用 OpenRouter 模型，新增 OpenRouter API 金鑰
+echo "OPENROUTER_API_KEY=your_openrouter_api_key" >> .env
+# 可選：如果 Ollama 不在本機執行，新增 Ollama 主機位址，預設為 http://localhost:11434
+echo "OLLAMA_HOST=your_ollama_host" >> .env
+
+# 使用 Docker Compose 執行
+docker-compose up
